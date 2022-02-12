@@ -1,17 +1,17 @@
-
 import firebase from "firebase";
 
 const config = {
-  apiKey:process.env.REACT_APP_API_KEY,
-  authDomain:process.env.REACT_APP_AUTH_DOMAIN,
-  projectId:process.env.REACT_APP_PROJECT_ID,
-  storageBucket:process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId:process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId:process.env.REACT_APP_APP_ID,
-  measurementId:process.env.REACT_APP_MEASUREMENT_ID
+    apiKey: "AIzaSyCbwEY8k6MdN6sKAoHDICH9oobd2dNOnzE",
+    authDomain: "fir-recipes-4ab64.firebaseapp.com",
+    projectId: "fir-recipes-4ab64",
+    storageBucket: "fir-recipes-4ab64.appspot.com",
+    messagingSenderId: "6117887857",
+    appId: "1:6117887857:web:6022c9235eaac8f0fe30d0",
+    measurementId: "G-NHY8D1HGNJ"
 };
-if(!firebase.apps.length){
-    firebase.initializeApp(config);
 
+if (!firebase.apps.length) {
+  firebase.initializeApp(config);
 }
+
 export default firebase;

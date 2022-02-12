@@ -1,14 +1,23 @@
-
+import {useState} from 'react';
 import './App.css';
-// eslint-disable-next-line no-unused-vars
-import firebase from './FirebaseConfig'
+import LoginForm from './component/LoginForm';
+import FirebaseAuthService from './FirebaseAuthService';
+
+
 
 
 function App() {
+  const [user, setUser] = useState(null)
+  FirebaseAuthService.subscribeToAuthChanges(setUser)
+  console.log(user)
   return (
     <div className="App">
-     <div className="tittle"><h1>Hi how are you !!</h1>
+     <div className="title-row">
+       <h1 className="title">Hi how are you !!</h1>
+       <LoginForm existingUser={user}></LoginForm>
+       
      </div>
+    
     </div>
   );
 }
